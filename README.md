@@ -79,3 +79,5 @@ yo-yo utiliza los Templates String de ecmascript 6 para introducir los elementos
 
 Al establece el contenido de un elemento HTML desde un string tretado por yo-yo lo que hacemos es un appendChild, pero esto deja lo que teníamos antes. Para que no pase esto utilizamos [empty-element](https://www.npmjs.com/package/empty-element) que es una librería muy simple que vacía el contenido del elemento del DOM previamente.
 ```npm intall --save empty-element```
+
+## Modularizando nuestro proyecto
