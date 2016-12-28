@@ -69,3 +69,13 @@ Vamos a automatizar esto. La domumentación está en https://docs.npmjs.com/misc
 Nuestra build la estamos haciendo con gulp que se encarga de todo. build no es algo que npm tenga por defecto así que para llamarlo tenemos que hacer `npm run build`. Sin embargo `start` si que es un comando por defecto y ejecuta por defecto el `node server.js` con lo que simplemente con `npm start` ya funciona correctamente. Esto se puede ver en la documentación en [default values](https://docs.npmjs.com/misc/scripts#default-values).
 
 A gulp le vamos a decir que esté pendiente de algunos archivos para que si se cambian se haga la buil de nuevo. Para ello usaremos [watchify](https://github.com/substack/watchify), añadiremos dos tipos de tarea a nuestro gulpfile una para hacer la buil y otra para quedar escuchando que definiremos para npm con el startdev de forma que escuche si hay cambios y tenga el servidor en pie.
+
+## Agregando interfaces de usuario con [yoyo](https://www.npmjs.com/package/yo-yo)
+
+Es una librería que sigue la filosofía de react. Nos va a permitir enriquecer mucho la aplicación del lado del cliente.
+```npm intall --save yo-yo```
+
+yo-yo utiliza los Templates String de ecmascript 6 para introducir los elementos del DOM.
+
+Al establece el contenido de un elemento HTML desde un string tretado por yo-yo lo que hacemos es un appendChild, pero esto deja lo que teníamos antes. Para que no pase esto utilizamos [empty-element](https://www.npmjs.com/package/empty-element) que es una librería muy simple que vacía el contenido del elemento del DOM previamente.
+```npm intall --save empty-element```
