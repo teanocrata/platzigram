@@ -1,0 +1,26 @@
+{
+  "name": "platzigram",
+  "version": "0.1.0",
+  "description": "Comparte tus fotos estudiando en Platzi con el resto de la comunidad",
+  "main": "server.js",
+  "keywords": [
+    "platzi",
+    "javascript",
+    "curso-definitivo",
+    "platzigram"
+  ],
+  "author": "ilice",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "materialize-css": "^0.97.8",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0"
+  }
+}
