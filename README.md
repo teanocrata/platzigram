@@ -42,8 +42,13 @@ Hoy en día las aplicaciones son muy ricas del lado del cliente en js.
 
 Para generar los favicon usamos [Favicon & App Icon Generator](http://www.favicon-generator.org/) que nos da a partir de una imagen todos los favicon necesarios y el código para la web.
 
-Además usamos [babel](https://babeljs.io/) que nos va a permitir utilizar el último js pero siendo compatible con navegadores antiguos. Lo utilizaremos a través de browserify con babelify:
-```npm i --save-dev browserify babelify```
-
 Además utilizamos pug a través del que renderizamos el código html de las páginas:
 ```npm install --save pug```
+
+## Agregando javascript en el cliente
+
+Javascript se apoya sobre ecmascript que va evolucionando (versión 6 de 2015) pero los navegadores no implementan todas las funcionalidades a la vez. Para ello usamos [babel](https://babeljs.io/). Lo instalamos como dependencias de desarrollo porque solo lo usamo en ese momento. babelify es la herramienta que vamos a utilizar para usar babel con browserify.
+```npm i --save-dev browserify babelify```
+
+[source](https://www.npmjs.com/package/vinyl-source-stream) nos va a transformar lo que devuelve el bundle a algo que entiende gulp para que gulp pueda continuar procesando el archivo.
+```npm i --save-dev vinyl-source-stream```
