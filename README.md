@@ -52,3 +52,8 @@ Javascript se apoya sobre ecmascript que va evolucionando (versión 6 de 2015) p
 
 [source](https://www.npmjs.com/package/vinyl-source-stream) nos va a transformar lo que devuelve el bundle a algo que entiende gulp para que gulp pueda continuar procesando el archivo.
 ```npm i --save-dev vinyl-source-stream```
+
+## Agregando navegación con Page.js
+
+Desde html5 los navegadores pueden cambiar de página sin necesidad de recargar la página completa. Esto lo hace [page](https://github.com/visionmedia/page.js), va navegando cambiando solo el contenido que cambia y no toda la página:
+```npm i --save page```
