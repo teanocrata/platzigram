@@ -57,3 +57,15 @@ Javascript se apoya sobre ecmascript que va evolucionando (versión 6 de 2015) p
 
 Desde html5 los navegadores pueden cambiar de página sin necesidad de recargar la página completa. Esto lo hace [page](https://github.com/visionmedia/page.js), va navegando cambiando solo el contenido que cambia y no toda la página:
 ```npm i --save page```
+
+## Automatizando la build
+
+Ahora mismo cada vez que hacemos un cambio para poder probarlo tenemos que:
+1. Parar el servidor
+1. Ejecutar ```$ gulp```
+1. Arrancar el servidor ```$node server.js```
+Vamos a automatizar esto. La domumentación está en https://docs.npmjs.com/misc/scripts. Es interesante ver todo.
+
+Nuestra build la estamos haciendo con gulp que se encarga de todo. build no es algo que npm tenga por defecto así que para llamarlo tenemos que hacer `npm run build`. Sin embargo `start` si que es un comando por defecto y ejecuta por defecto el `node server.js` con lo que simplemente con `npm start` ya funciona correctamente. Esto se puede ver en la documentación en [default values](https://docs.npmjs.com/misc/scripts#default-values).
+
+A gulp le vamos a decir que esté pendiente de algunos archivos para que si se cambian se haga la buil de nuevo. Para ello usaremos [watchify](https://github.com/substack/watchify), añadiremos dos tipos de tarea a nuestro gulpfile una para hacer la buil y otra para quedar escuchando que definiremos para npm con el startdev de forma que escuche si hay cambios y tenga el servidor en pie.
