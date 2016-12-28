@@ -83,3 +83,7 @@ Al establece el contenido de un elemento HTML desde un string tretado por yo-yo 
 ## Modularizando nuestro proyecto
 
 ## Agregando la página de sign in
+
+## Cambiando el título de la página
+
+Como no recargamos lás págias la navegar, el título no cambia y necesitamos otra librería para que lo haga, usamos para ello [title](https://www.npmjs.com/package/title) ```npm install --save title```
