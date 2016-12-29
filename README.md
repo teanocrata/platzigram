@@ -88,3 +88,7 @@ Al establece el contenido de un elemento HTML desde un string tretado por yo-yo 
 ## Cambiando el título de la página
 
 Como no recargamos lás páginas la navegar, el título no cambia y necesitamos otra librería para que lo haga, usamos para ello [title](https://www.npmjs.com/package/title) ```npm install --save title```
+
+## Internacionalización
+
+Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs.io/)

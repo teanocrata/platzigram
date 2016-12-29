@@ -1,5 +1,17 @@
 var yo = require('yo-yo');
-var moment = require('moment');
+
+if(!window.Intl){
+  window.Intl = require('intl');
+  require('intl/locale-data/jsonp/en-US.js');
+  require('intl/locale-data/jsonp/es.js');
+}
+
+window.IntlRelativeFormat  = require('intl-relativeformat');
+
+require('intl-relativeformat/dist/locale-data/en.js');
+require('intl-relativeformat/dist/locale-data/es.js');
+
+var rf = new IntlRelativeFormat('en-US');
 
 module.exports = function pictureCard( pic) {
 
@@ -15,7 +27,7 @@ module.exports = function pictureCard( pic) {
           <img src="${picture.user.avatar}" class="avatar" />
           <spam class="username">${picture.user.username}</span>
         </a>
-        <small class="right time">${moment(picture.createdAt).fromNow()}</small>
+        <small class="right time">${rf.format(picture.createdAt)}</small>
         <p>
           <a class="left" href="#" onclick=${like.bind(null, true)}><i class="fa fa-heart-o" aria-hidden="true"></i></a>
           <a class="left" href="#" onclick=${like.bind(null, false)}><i class="fa fa-heart" aria-hidden="true"></i></a>
