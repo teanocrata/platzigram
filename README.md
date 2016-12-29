@@ -1,18 +1,20 @@
 # platzigram
 Curso definitivo de Javascript
 
-Utilizamos [materializecss](http://materializecss.com/) como framework web front-end basado en Material Design
-
 Para desarrollar necesitamos tener instalado [Nodejs](https://nodejs.org/en/) y [npm](https://www.npmjs.com/) como gestor de paquetes
+
+Como gestor de paquetes utilizamos [npm](https://www.npmjs.com/) en lugar de [bower](https://bower.io/) o [duojs](http://duojs.org/), este último puede ser bastante interesante para proyectos pequeños.
 
 Para empezar a desarrollar hemos ejecutado
 ```npm init```
 que inicializa el proyecto para js y crea el manifest, en este caso el package.json. Como vamos a utilizar js del lado del servidor pondremos como main el server.js
 
+A partir de este momento todo lo que utilicemos se irá reflejando en el archivo package.json. Si lo usamos solo para desarrollar lo añadiremos con `--save-dev`, si se utiliza en el código con `--save`.
+
+Utilizamos [materializecss](http://materializecss.com/) como framework web front-end basado en Material Design: `npm install --save materialize-css`
+
 Utilizamos [express](http://expressjs.com/) para hacer nuestro servidor web, lo incluimos en las dependencias con:
 ```npm install --save express``
-
-Como gestor de paquetes utilizamos [npm](https://www.npmjs.com/) en lugar de [bower](https://bower.io/) o [duojs](http://duojs.org/), este último puede ser bastante interesante para proyectos pequeños.
 
 Como ensamblador de paquetes utilizamos [browserify](http://browserify.org/) en lugar de otros como [webpack](https://webpack.github.io/) a pesar de que este último se está convirtiendo prácticamente en un estandar, pero browserify es un poco más simple y para el caso nos sirve mejor. Estos ensambladores lo que hacen es básicamente generar un js final que es el que utilizaremos.
 
@@ -20,10 +22,7 @@ Como automatizadore de tareas utilizamos [gulp](http://gulpjs.com/). También ex
 
 Utilizamos también como preprocesador de css [sass-lang](http://sass-lang.com/). Existen otros como [less](http://lesscss.org/) o [stylus](http://stylus-lang.com/). Básicamente facilitan el trabajo con css escribiendo menos código, permiten usar variables, etc en desarrollo. Luego todo se pasa a css normal.
 
-Por tanto incluimos materialize-css:
-```npm install --save materialize-css```
-
-Y tanto gulp como gulp-sass sólo para desarrollo:
+Tanto gulp como gulp-sass lo añadimos sólo para desarrollo:
 ```npm install --save-dev gulp gulp-sass```
 
 En gulp básicamente creamos un gulpfile donde vamos especificando las tareas necesarias, le decimos copia esto aquí,etc.
@@ -68,7 +67,7 @@ Vamos a automatizar esto. La domumentación está en https://docs.npmjs.com/misc
 
 Nuestra build la estamos haciendo con gulp que se encarga de todo. build no es algo que npm tenga por defecto así que para llamarlo tenemos que hacer `npm run build`. Sin embargo `start` si que es un comando por defecto y ejecuta por defecto el `node server.js` con lo que simplemente con `npm start` ya funciona correctamente. Esto se puede ver en la documentación en [default values](https://docs.npmjs.com/misc/scripts#default-values).
 
-A gulp le vamos a decir que esté pendiente de algunos archivos para que si se cambian se haga la buil de nuevo. Para ello usaremos [watchify](https://github.com/substack/watchify), añadiremos dos tipos de tarea a nuestro gulpfile una para hacer la buil y otra para quedar escuchando que definiremos para npm con el startdev de forma que escuche si hay cambios y tenga el servidor en pie.
+A gulp le vamos a decir que esté pendiente de algunos archivos para que si se cambian se haga la build de nuevo. Para ello usaremos [watchify](https://github.com/substack/watchify), añadiremos dos tipos de tarea a nuestro gulpfile una para hacer la build y otra para quedar escuchando que definiremos para npm con el startdev de forma que escuche si hay cambios y tenga el servidor en pie.
 
 ## Agregando interfaces de usuario con [yoyo](https://www.npmjs.com/package/yo-yo)
 
@@ -86,4 +85,4 @@ Al establece el contenido de un elemento HTML desde un string tretado por yo-yo 
 
 ## Cambiando el título de la página
 
-Como no recargamos lás págias la navegar, el título no cambia y necesitamos otra librería para que lo haga, usamos para ello [title](https://www.npmjs.com/package/title) ```npm install --save title```
+Como no recargamos lás páginas la navegar, el título no cambia y necesitamos otra librería para que lo haga, usamos para ello [title](https://www.npmjs.com/package/title) ```npm install --save title```
