@@ -69,6 +69,8 @@ Nuestra build la estamos haciendo con gulp que se encarga de todo. build no es a
 
 A gulp le vamos a decir que esté pendiente de algunos archivos para que si se cambian se haga la build de nuevo. Para ello usaremos [watchify](https://github.com/substack/watchify), añadiremos dos tipos de tarea a nuestro gulpfile una para hacer la build y otra para quedar escuchando que definiremos para npm con el startdev de forma que escuche si hay cambios y tenga el servidor en pie.
 
+Para poder ejecutar los dos procesos concurrentemente (el watch y el server) utilizamos [concurrently](https://www.npmjs.com/package/concurrently) que se encarga de que todo funcione bien.
+
 ## Agregando interfaces de usuario con [yoyo](https://www.npmjs.com/package/yo-yo)
 
 Es una librería que sigue la filosofía de react. Nos va a permitir enriquecer mucho la aplicación del lado del cliente.

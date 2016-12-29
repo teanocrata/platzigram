@@ -12,6 +12,7 @@
   "author": "ilice",
   "license": "MIT",
   "dependencies": {
+    "concurrently": "^3.1.0",
     "empty-element": "^1.0.0",
     "express": "^4.14.0",
     "materialize-css": "^0.97.8",
@@ -31,6 +32,6 @@
   },
   "scripts": {
     "build": "gulp",
-    "startdev": "gulp watch | node server.js"
+    "start": "concurrently \"gulp watch\" \"node server.js\""
   }
 }
