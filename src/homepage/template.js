@@ -1,7 +1,7 @@
 var yo = require('yo-yo');
 var layout = require('../layout');
 
-var template = yo`<div class="container timeline">
+var template = yo `<div class="container timeline">
   <div class="row">
     <dic class="col s12 m10 offset-m1 l6 offset-l3">
       content

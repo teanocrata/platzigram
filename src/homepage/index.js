@@ -1,7 +1,7 @@
 var page = require('page');
 var empty = require('empty-element');
-var title = require('title');
 var template = require('./template');
+var title = require('title');
 
 page('/', function(ctx, next) {
     title('Platzigram');
