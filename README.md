@@ -112,3 +112,7 @@ npm i --save superagent
 ## Obteniendo una respuesta del servidor con [Axios](https://github.com/mzabriskie/axios)
 
 Esta es otra manera de hacer request pero esta vez con el uso de promesas. Las promesas surgen para resolver el callback hell, callbacks dentro de callbacks y crecimiento horizontal.
+
+## Con Fetch
+
+Fetch va soportado por los navegadores pero hay que usar polyfills ya que aún no está soportado por todos los navegadores, para ello podemos usar [window.fetch polyfill](https://github.com/github/fetch)
