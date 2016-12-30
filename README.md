@@ -99,9 +99,16 @@ Para fechas la parte que usamos es [Intl RelativeFormat](https://github.com/yaho
 La librería nos da todo lo necesario para traducir toda la aplicación, mensajes, números, etc.
 
 
-## Podríamos
+## Obteniendo una respuesta del servidor con Superagent
 
-Podríamos utilizar por ejemplo jquery para ejecutar las peticiones al servidor pero en nuestro caso vamos a usar [superagent](https://github.com/visionmedia/superagent)
+Podríamos utilizar por ejemplo jquery para ejecutar las peticiones al servidor pero en nuestro caso vamos a usar [superagent](https://github.com/visionmedia/superagent) que hace uso de callbacks
+
+Recibimos como primer parámetro el posible error y luego la respuesta.
+
 ```
 npm i --save superagent
 ```
+
+## Obteniendo una respuesta del servidor con [Axios](https://github.com/mzabriskie/axios)
+
+Esta es otra manera de hacer request pero esta vez con el uso de promesas. Las promesas surgen para resolver el callback hell, callbacks dentro de callbacks y crecimiento horizontal.
