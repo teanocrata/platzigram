@@ -92,4 +92,8 @@ Como no recargamos lás páginas la navegar, el título no cambia y necesitamos 
 
 ## Internacionalización
 
-Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs.io/), inicialmente estábamo utilizando momentJS pero ahora utilizamos formatJS inicialmente para las fechas y posteriormente paratodos los textos
+Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs.io/), inicialmente estábamo utilizando momentJS pero ahora utilizamos formatJS inicialmente para las fechas y posteriormente paratodos los textos.
+
+Para fechas la parte que usamos es [Intl RelativeFormat](https://github.com/yahoo/intl-relativeformat)  mientras que para los mensajes usaremos [Intl MessageFormatl](https://github.com/yahoo/intl-messageformat).
+
+La librería nos da todo lo necesario para traducir toda la aplicación, mensajes, números, etc.
