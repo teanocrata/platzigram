@@ -97,3 +97,11 @@ Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs
 Para fechas la parte que usamos es [Intl RelativeFormat](https://github.com/yahoo/intl-relativeformat)  mientras que para los mensajes usaremos [Intl MessageFormatl](https://github.com/yahoo/intl-messageformat).
 
 La librería nos da todo lo necesario para traducir toda la aplicación, mensajes, números, etc.
+
+
+## Podríamos
+
+Podríamos utilizar por ejemplo jquery para ejecutar las peticiones al servidor pero en nuestro caso vamos a usar [superagent](https://github.com/visionmedia/superagent)
+```
+npm i --save superagent
+```
