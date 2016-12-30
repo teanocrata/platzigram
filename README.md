@@ -116,3 +116,7 @@ Esta es otra manera de hacer request pero esta vez con el uso de promesas. Las p
 ## Con Fetch
 
 Fetch va soportado por los navegadores pero hay que usar polyfills ya que aún no está soportado por todos los navegadores, para ello podemos usar [window.fetch polyfill](https://github.com/github/fetch)
+
+## Con las nuevas funcionalidades de ecmascript2016 async/await
+
+Como aún no están disponibles hay que usar algunas librerías pero parece que se van a convertir en un standard
