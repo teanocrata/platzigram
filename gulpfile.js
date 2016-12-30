@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var babel = require('babelify');
+
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
@@ -27,7 +28,7 @@ function compile(watch) {
 
     function rebundle() {
         bundle
-            .transform(babel)
+            .transform(babel, {presets: ["es2015"]})
             .bundle()
             .on('error', function(err){ console.log(err); this.emit('end'); })
             .pipe(source('index.js'))

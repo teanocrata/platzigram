@@ -48,6 +48,7 @@ Además utilizamos pug a través del que renderizamos el código html de las pá
 
 Javascript se apoya sobre ecmascript que va evolucionando (versión 6 de 2015) pero los navegadores no implementan todas las funcionalidades a la vez. Para ello usamos [babel](https://babeljs.io/). Lo instalamos como dependencias de desarrollo porque solo lo usamo en ese momento. babelify es la herramienta que vamos a utilizar para usar babel con browserify.
 ```npm i --save-dev browserify babelify```
+```npm install --save-dev babel-preset-es2015```
 
 [source](https://www.npmjs.com/package/vinyl-source-stream) nos va a transformar lo que devuelve el bundle a algo que entiende gulp para que gulp pueda continuar procesando el archivo.
 ```npm i --save-dev vinyl-source-stream```
@@ -91,4 +92,4 @@ Como no recargamos lás páginas la navegar, el título no cambia y necesitamos 
 
 ## Internacionalización
 
-Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs.io/)
+Para poder mostrar los textos traducidos utilizaremos [formatjs](http://formatjs.io/), inicialmente estábamo utilizando momentJS pero ahora utilizamos formatJS inicialmente para las fechas y posteriormente paratodos los textos
