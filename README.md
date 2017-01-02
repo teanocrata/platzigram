@@ -120,3 +120,8 @@ Fetch va soportado por los navegadores pero hay que usar polyfills ya que aún n
 ## Con las nuevas funcionalidades de ecmascript2016 async/await
 
 Como aún no están disponibles hay que usar algunas librerías pero parece que se van a convertir en un standard
+
+## Subir archivos al servidor
+Utilizmos [multer](https://www.npmjs.com/package/multer) que nos permite controlar fácilmente la subida de archivos a nuestro servidor.
+
+También utilizamos una librería muy simple, [file-extension](https://www.npmjs.com/package/file-extension), para obtener la extensión del archivo que estamos usando
