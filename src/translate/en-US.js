@@ -18,5 +18,13 @@ module.exports = {
     'signin.not-have-account': 'Don\'t have an account?',
     'language': 'Language',
     'upload-picture': 'Upload picture',
-    'upload': 'Subir'
+    'upload': 'Subir',
+    'edit-profile': 'Edit profile',
+    'posts': '{posts, plural, ' +
+        '=1 {# post}' +
+        'other {# posts}}',
+    'follower': '{follower, plural, ' +
+        '=1 {# follower}' +
+        'other {# followers}}',
+    'following': '{ following, number} following'
 };
