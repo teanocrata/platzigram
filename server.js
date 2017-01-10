@@ -10,7 +10,7 @@ var storage = multer.diskStorage({
     cb(null, +Date.now() + '.' + ext(file.originalname))
   }
 })
- 
+
 var upload = multer({ storage: storage }).single('picture');
 
 var app = express();
@@ -35,8 +35,8 @@ app.get('/api/pictures', function (req, res, next) {
   var pictures = [
     {
       user: {
-        username: 'slifszyc',
-        avatar: 'https://scontent-atl3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11031148_10153448564292612_2579019413701631604_n.jpg?oh=d83cdd0687c87c91b247a42375fc5a57&oe=57B12767'
+        username: 'teanocrata',
+        avatar: 'https://lh3.googleusercontent.com/-x0pxbjLoxNQ/VR0c-mWNBFI/AAAAAAAAACs/kr61HQZqESY6Tuht40GigtVwYm0W7kjmgCEw/w140-h140-p/Perfil%2Bteanocrata%2B3.png'
       },
       url: 'office.jpg',
       likes: 0,
@@ -45,8 +45,8 @@ app.get('/api/pictures', function (req, res, next) {
     },
     {
       user: {
-        username: 'slifszyc',
-        avatar: 'https://scontent-atl3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11031148_10153448564292612_2579019413701631604_n.jpg?oh=d83cdd0687c87c91b247a42375fc5a57&oe=57B12767'
+        username: 'teanocrata',
+        avatar: 'https://lh3.googleusercontent.com/-x0pxbjLoxNQ/VR0c-mWNBFI/AAAAAAAAACs/kr61HQZqESY6Tuht40GigtVwYm0W7kjmgCEw/w140-h140-p/Perfil%2Bteanocrata%2B3.png'
       },
       url: 'office.jpg',
       likes: 1,
@@ -56,7 +56,7 @@ app.get('/api/pictures', function (req, res, next) {
   ];
 
   setTimeout(function () {
-    res.send(pictures);  
+    res.send(pictures);
   }, 2000)
 });
 
