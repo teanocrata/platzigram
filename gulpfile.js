@@ -35,7 +35,7 @@ function compile(watch) {
     bundle
       .transform(babel, { presets: [ 'es2015' ], plugins: [ 'syntax-async-functions', 'transform-regenerator' ] })
       .bundle()
-      .on('error', function (err) { console.log(err); this.emit('end') })
+      .on('error', function (err) { console.log(err); this.emit('end'); })
       .pipe(source('index.js'))
       .pipe(rename('app.js'))
       .pipe(gulp.dest('public'));
@@ -51,5 +51,3 @@ gulp.task('build', function () {
 gulp.task('watch', function () { return compile(true); });
 
 gulp.task('default', ['styles', 'assets', 'build']);
-
-
